@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 10pt; font-family: arial">
+    <head>
+        <meta name="pdfkit-page-height" content="297mm"/>
+        <meta name="pdfkit-page-width" content="210mm"/>
+        <meta name="pdfkit-margin-top" content="25mm"/>
+        <meta name="pdfkit-margin-bottom" content="8mm"/>
+        <meta name="pdfkit-margin-left" content="5mm"/>
+        <meta name="pdfkit-margin-right" content="5mm"/>
+
+        <meta name="pdfkit-header-line" content=""/>
+        <meta name="pdfkit-header-spacing" content="2"/>
+        <meta name="pdfkit-header-html" content="header_rendered.html"/>
+
+        <meta name="pdfkit-footer-line" content=""/>
+        <meta name="pdfkit-footer-font-size" content="8"/>
+        <meta name="pdfkit-footer-left" content="Page [page] (This is a system generated document)"/>
+    </head>
+
+    <body>
+        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+            <colgroup>
+                <col style="width: 25%">
+                <col style="width: 25%">
+                <col style="width: 25%">
+            </colgroup>
+            <tbody style="padding: 2pt; line-height: 15pt; font-size : 10pt">
+                <tr>
+                    <td>Start Date : {{ params.start_date }}</td>
+                    <td>End Date : {{ params.end_date }}</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Category : {{ params.category }} </td>
+                    <td>SubCategory : {{ params.subcategory }}</td>
+                    <td>Channel Type : {{ params.channel }}</td>
+                    <td>Attribute 1: {{ params.attribute1 }}</td>
+                </tr>
+                <tr>
+                    <td>Attribute 2 : {{ params.attribute2 }}</td>
+                    <td>Season : {{params.season }}</td>
+                    <td>Brand : {{ params.brand }} </td>
+                    <td>Gender : {{ params.gender }}</td>
+                </tr>
+                <tr>
+                    <td>Style Tagging : {{ params.style_tag }}</td>
+                    <td>Sort By : {{ params.sort_by }}</td>
+                    <td>Number of Records : {{results|length}}</td>
+                    <td>Minimum Healthy Days Live : {{ params.minLiveDays }}</td>
+                </tr>
+                <tr>
+                    <td>Min STR% : {{ params.minStrPercentage }}%</td>
+                    <td>Max STR% : {{ params.maxStrPercentage }}%</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br> 
+        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+            <colgroup>
+                <col style="width: 33%">
+                <col style="width: 33%">
+                <col style="width: 33%">
+            </colgroup>
+            <tbody style="padding: 2pt">
+            {% if results|length == 0 %} 
+                <tr style="">
+                    <td colspan="3" style="text-align: center; margin-bottom: 1mm; margin-top:1mm; font-weight: bold">
+                        No Topseller Styles
+                    </td>
+            {% else %}
+                {% for i in range(results|length) %}
+                    <td style="padding: 2pt; "> 
+                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                            <colgroup>
+                                <col style="width: 50%">
+                                <col style="width: 50%">
+                            </colgroup>
+                            <tbody style="border: solid 1px black;">
+                                <tr>
+                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold;">
+                                        {{ results[i].style }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img style="padding-left: 5pt; 
+                                                    padding-right: 5pt;" 
+                                                    height="auto" 
+                                                    width="150mm" 
+                                                    src="{{ results[i].imageUrl }}" /> 
+                                                    <!-- src="./pdfResources/increff_image.jpg" />  -->
+
+                                    </td>
+                                    <td>
+                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                            <colgroup>
+                                                <col style="width: 65%">
+                                                <col style="width: 35%">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                                    <td> {{ results[i].healthyRos }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">DOH</td>
+                                                    <td> {{ results[i].doh }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">MRP</td>
+                                                    <td> {{ results[i].mrp }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">STR</td>
+                                                    <td> {{ results[i].str }} %</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Qty. Sold</td>
+                                                    <td> {{ results[i].rawSalesQty }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Revenue</td>
+                                                    <td> {{ writeDecimal(results[i].revenue) }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Healthy Days Live</td>
+                                                    <td> {{ results[i].avgHealthyDaysLive }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Days Live</td>
+                                                    <td> {{ results[i].avgRawDaysLive }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Closing Stock</td>
+                                                    <td> {{ results[i].closingStock }} </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">Avg. Discount</td>
+                                                    <td> {{ results[i].averageDiscountPercentage }} %</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-weight: bold">No of Stores</td>
+                                                    <td> {{ results[i].noOfStores }} </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    {% if(i%3==2 and i!=((results|length)-1)) %}
+                </tr>
+                <tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+                </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
