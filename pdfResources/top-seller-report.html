@@ -101,13 +101,12 @@
             </colgroup>
             <tbody style="padding: 2pt">
             {% if results|length == 0 %} 
-                <tr style="">
+                <tr>
                     <td colspan="3" style="text-align: center; margin-bottom: 1mm; margin-top:1mm; font-weight: bold">
                         No Topseller Styles
                     </td>
             {% else %}
-                    LO LO LO LO
-                {% for i in range(results|length) %}
+                {% for item in results %}
                     <td style="padding: 2pt; "> 
                         <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
                             <colgroup>
@@ -117,7 +116,7 @@
                             <tbody style="border: solid 1px black;">
                                 <tr>
                                     <td colspan="2" style="text-align: center; color: blue; font-weight: bold;">
-                                        {{ writeString(results[i].style) }}
+                                        {{ writeString(item.style) }}
                                     </td>
                                 </tr>
                                 <tr>
@@ -126,7 +125,7 @@
                                                     padding-right: 5pt;" 
                                                     height="auto" 
                                                     width="150mm" 
-                                                    src="{{ results[i].imageUrl }}" /> 
+                                                    src="{{ item.imageUrl }}" /> 
                                                     <!-- src="./pdfResources/increff_image.jpg" />  -->
 
                                     </td>
@@ -139,47 +138,47 @@
                                             <tbody>
                                                 <tr>
                                                     <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> {{ writeDecimal(results[i].healthyRos) }} </td>
+                                                    <td> {{ writeDecimal(item.healthyRos) }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">DOH</td>
-                                                    <td> {{ writeDecimal(results[i].doh) }}</td>
+                                                    <td> {{ writeDecimal(item.doh) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">MRP</td>
-                                                    <td> {{ writeDecimal(results[i].mrp) }}</td>
+                                                    <td> {{ writeDecimal(item.mrp) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">STR</td>
-                                                    <td> {{ writeDecimal(results[i].str) }} %</td>
+                                                    <td> {{ writeDecimal(item.str) }} %</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> {{ writeInteger(results[i].rawSalesQty) }}</td>
+                                                    <td> {{ writeInteger(item.rawSalesQty) }}</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Revenue</td>
-                                                    <td> {{ writeInteger(results[i].revenue) }} </td>
+                                                    <td> {{ writeInteger(item.revenue) }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> {{ writeInteger(results[i].avgHealthyDaysLive) }} </td>
+                                                    <td> {{ writeInteger(item.avgHealthyDaysLive) }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Days Live</td>
-                                                    <td> {{ writeInteger(results[i].avgRawDaysLive) }} </td>
+                                                    <td> {{ writeInteger(item.avgRawDaysLive) }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> {{ writeInteger(results[i].closingStock) }} </td>
+                                                    <td> {{ writeInteger(item.closingStock) }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> {{ writeDecimal(results[i].averageDiscountPercentage) }} %</td>
+                                                    <td> {{ writeDecimal(item.averageDiscountPercentage) }} %</td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">No of Stores</td>
-                                                    <td> {{ writeInteger(results[i].noOfStores) }} </td>
+                                                    <td> {{ writeInteger(item.noOfStores) }} </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -188,7 +187,7 @@
                             </tbody>
                         </table>
                     </td>
-                    {% if(i%3==2 and i!=((results|length)-1)) %}
+                    {% if(loop.index%3==0 and not loop.last) %}
                 </tr>
                 <tr>
                     {% endif %}
