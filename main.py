@@ -48,6 +48,8 @@ def generateParams():
         "start_date" : "11-01-23",
         "end_date" : "11-20-23",
         "category" : "category1",
+        "subcategory" : "subcategory1",
+
         "channel" : "channel1",
         "attribute1" : "attribute1",
         "attribute2" : "attribute2",
@@ -64,7 +66,7 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(40);
+    results = generateTableData(10);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
