@@ -66,7 +66,7 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(10);
+    results = generateTableData(50);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
@@ -82,8 +82,8 @@ def getPdfFromHTML(data):
     template = environment.get_template("./pdfResources/top-seller-report.html")
     content = template.render( data )
 
-    # with open("generated_pdf_rendered.html", "w") as file:
-    #     file.write(content)
+    with open("generated_pdf_rendered.html", "w") as file:
+        file.write(content)
 
     # Header
     header_template = environment.get_template("./pdfResources/header.html")

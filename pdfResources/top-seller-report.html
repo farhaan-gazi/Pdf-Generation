@@ -92,22 +92,11 @@
             </tbody>
         </table>
 
-        <br> 
-        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-            <colgroup>
-                <col style="width: 33%">
-                <col style="width: 33%">
-                <col style="width: 33%">
-            </colgroup>
-            <tbody style="padding: 2pt">
-            {% if results|length == 0 %} 
-                <tr>
-                    <td colspan="3" style="text-align: center; margin-bottom: 1mm; margin-top:1mm; font-weight: bold">
-                        No Topseller Styles
-                    </td>
-            {% else %}
-                {% for item in results %}
-                    <td style="padding: 2pt; "> 
+        <br>
+
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+        {% for item in results %}
+            <div style="display: table-cell; width: 33%; padding:2px">
                         <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
                             <colgroup>
                                 <col style="width: 50%">
@@ -186,16 +175,20 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </td>
-                    {% if(loop.index%3==0 and not loop.last) %}
-                </tr>
-                <tr>
-                    {% endif %}
+            </div>
+            {% if(loop.index%3==0 and not loop.last) %}
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            {% endif %}
+
+            {% if (loop.last and loop.length%3!=0) %}
+                {%for i in range(3-(loop.length%3))%}
+                    <div style="display: table-cell; width: 33.33%"> &nbsp; </div>
                 {% endfor %}
             {% endif %}
-                </tr>
-            </tbody>
-        </table>
+
+        {% endfor %}
+        </div>
 
     </body>
 </html>
