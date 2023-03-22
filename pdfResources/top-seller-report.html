@@ -10,7 +10,7 @@
 
         <meta name="pdfkit-header-line" content=""/>
         <meta name="pdfkit-header-spacing" content="2"/>
-        <meta name="pdfkit-header-html" content="header_rendered.html"/>
+        <meta name="pdfkit-header-html" content="./pdfResources/header_rendered.html"/>
 
         <meta name="pdfkit-footer-line" content=""/>
         <meta name="pdfkit-footer-font-size" content="8"/>
@@ -124,7 +124,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Revenue</td>
-                                                    <td> {{ writeDecimal(results[i].revenue) }} </td>
+                                                    <td> {{ results[i].revenue }} </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="font-weight: bold">Healthy Days Live</td>

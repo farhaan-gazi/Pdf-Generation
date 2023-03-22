@@ -80,15 +80,14 @@ def getPdfFromHTML(data):
     template = environment.get_template("./pdfResources/top-seller-report.html")
     content = template.render( data )
 
-    with open("generated_pdf_rendered.html", "w") as file:
-        file.write(content)
+    # with open("generated_pdf_rendered.html", "w") as file:
+    #     file.write(content)
 
     # Header
-    header_template = environment.get_template("header.html")
+    header_template = environment.get_template("./pdfResources/header.html")
     header_data = { "increffLogo" : data["increffLogo"] }
     header_content = header_template.render(header_data)
-
-    with open("heade_rendered1.html", "w") as file:
+    with open("./pdfResources/header_rendered.html", "w") as file:
         file.write(header_content)
 
     config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
