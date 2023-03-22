@@ -11,16 +11,10 @@ import copy;
         5. DONE : Table Break
         6. DONE : Proper Input
         7. DONE : Table Border
-        8. Write Relevant Macros
-        9. Fix page-break
-        10. change range loop to for each loop : use jinja2 varianles
-   <ul>
-{% for user in users %}
-    <li>{{ user.username|e }}</li>
-{% else %}
-    <li><em>no users found</em></li>
-{% endfor %}
-</ul>     
+        8. DONE : Write Relevant Macros
+        9. DONE : Fix page-break
+       10. DONE :change range loop to for each loop : use jinja2 varianles
+       11. No Top Seller Case
 """
 
 
@@ -66,7 +60,7 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(50);
+    results = generateTableData(0);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,

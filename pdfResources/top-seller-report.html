@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 10pt; font-family: arial">
+<html lang="en" style="font-size: 9pt; font-family: arial">
     <head>
         <meta name="pdfkit-page-height" content="297mm"/>
         <meta name="pdfkit-page-width" content="210mm"/>
-        <meta name="pdfkit-margin-top" content="25mm"/>
+        <meta name="pdfkit-margin-top" content="20mm"/>
         <meta name="pdfkit-margin-bottom" content="8mm"/>
         <meta name="pdfkit-margin-left" content="5mm"/>
         <meta name="pdfkit-margin-right" content="5mm"/>
 
         <meta name="pdfkit-header-line" content=""/>
-        <meta name="pdfkit-header-spacing" content="2"/>
+        <meta name="pdfkit-header-spacing" content="1"/>
         <meta name="pdfkit-header-html" content="./pdfResources/header_rendered.html"/>
 
         <meta name="pdfkit-footer-line" content=""/>
@@ -58,10 +58,10 @@
                 <col style="width: 25%">
                 <col style="width: 25%">
             </colgroup>
-            <tbody style="padding: 2pt; line-height: 15pt; font-size : 10pt">
+            <tbody style="line-height: 15pt; font-size : 10pt">
                 <tr>
-                    <td>Start Date : {{ writeParam(params.start_date) }}</td>
-                    <td>End Date : {{ writeParam(params.end_date) }}</td>
+                    <td style="padding-top: 10pt">Start Date : {{ writeParam(params.start_date) }}</td>
+                    <td style="padding-top: 10pt">End Date : {{ writeParam(params.end_date) }}</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -92,11 +92,15 @@
             </tbody>
         </table>
 
+        {% if (results|length==0) %}
+            <hr>
+            <h2 style="text-align: center;"> No Topseller Styles </h2>
+        {% endif %}
         <br>
 
         <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
         {% for item in results %}
-            <div style="display: table-cell; width: 33%; padding:2px">
+            <div style="display: table-cell; width: 33%; padding: 3px">
                         <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
                             <colgroup>
                                 <col style="width: 50%">
@@ -104,7 +108,7 @@
                             </colgroup>
                             <tbody style="border: solid 1px black;">
                                 <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold;">
+                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
                                         {{ writeString(item.style) }}
                                     </td>
                                 </tr>
@@ -115,10 +119,9 @@
                                                     height="auto" 
                                                     width="150mm" 
                                                     src="{{ item.imageUrl }}" /> 
-                                                    <!-- src="./pdfResources/increff_image.jpg" />  -->
 
                                     </td>
-                                    <td>
+                                    <td style="padding-bottom: 9pt">
                                         <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
                                             <colgroup>
                                                 <col style="width: 65%">
@@ -183,11 +186,12 @@
 
             {% if (loop.last and loop.length%3!=0) %}
                 {%for i in range(3-(loop.length%3))%}
-                    <div style="display: table-cell; width: 33.33%"> &nbsp; </div>
+            <div style="display: table-cell; width: 33.33%"> &nbsp; </div>
                 {% endfor %}
             {% endif %}
 
         {% endfor %}
+
         </div>
 
     </body>
