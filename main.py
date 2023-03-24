@@ -1,23 +1,9 @@
 from jinja2 import Environment, FileSystemLoader
 import pdfkit
 import copy;
+
 from weasyprint import HTML
-
-"""
-    TODO : 
-        1. DONE : Multiple Pages 
-        2. DONE : Header
-        3. DONE : Footer 
-        4. DONE : Image Resolve
-        5. DONE : Table Break
-        6. DONE : Proper Input
-        7. DONE : Table Border
-        8. DONE : Write Relevant Macros
-        9. DONE : Fix page-break
-       10. DONE :change range loop to for each loop : use jinja2 varianles
-       11. No Top Seller Case
-"""
-
+from weasyprint.text.fonts import FontConfiguration
 
 def generateTableData(N):
     notAvailable = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg"
@@ -30,9 +16,9 @@ def generateTableData(N):
     ]
     for i in range(N-1):
         sample = copy.deepcopy(topSellerStyleLevelPdfRowList[0])
-        sample["style"] = str(i);
-        sample["doh"] = sample["doh"]+i;
-        topSellerStyleLevelPdfRowList.append(sample);
+        sample["style"] = str(i)
+        sample["doh"] = sample["doh"]+i
+        topSellerStyleLevelPdfRowList.append(sample)
 
     if(N==0):
         return []
@@ -61,27 +47,41 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(100);
+    results = generateTableData(10);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
             "results" : results,
             "increffLogo" : increffLogoUrl
     }
-    getPdfFromHTML(data)
+    getPdfFromHTMLusingWeasyPrint(data)
 
-def getPdfFromHTML(data):
+
+def getPdfFromHTMLusingWeasyPrint(data):
+    environment = Environment(loader=FileSystemLoader("./"))
+
+    #content
+    template = environment.get_template("./pdfResources/top-seller-report.html")
+    content = template.render( data )
+    with open("pdf_rendered.html", "w") as file: # for PDF 
+        file.write(content)
+
+    font_config = FontConfiguration()
+    html = HTML(filename='pdf_rendered.html')
+    html.write_pdf( './pdf_rendered.pdf', 
+                   font_config=font_config,
+                    presentational_hints=True )
+
+
+def getPdfFromHTMLusingPdfKit(data):
     environment = Environment(loader=FileSystemLoader("./"))
 
     #content
     template = environment.get_template("./pdfResources/top-seller-report.html")
     content = template.render( data )
 
-    with open("generated_pdf_rendered.html", "w") as file:
-        file.write(content)
-    
-    html = HTML(content)
-    
+    # with open("generated_pdf_rendered.html", "w") as file:
+    #     file.write(content)
 
     # Header
     header_template = environment.get_template("./pdfResources/header.html")

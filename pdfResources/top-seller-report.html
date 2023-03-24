@@ -17,6 +17,12 @@
         <meta name="pdfkit-footer-left" content="Page [page] (This is a system generated document)"/>
     </head>
 
+<style>
+    @page{
+        margin: 5mm;
+    }
+</style>
+
 {# Macros #}
 {% macro writeString(str) %}
         {% if str %}
@@ -117,7 +123,7 @@
                                         <img style="padding-left: 5pt; 
                                                     padding-right: 5pt;" 
                                                     height="auto" 
-                                                    width="150mm" 
+                                                    width="25mm" 
                                                     src="{{ item.imageUrl }}" /> 
 
                                     </td>
