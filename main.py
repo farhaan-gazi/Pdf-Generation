@@ -1,6 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 import pdfkit
 import copy;
+from weasyprint import HTML
 
 """
     TODO : 
@@ -60,7 +61,7 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(0);
+    results = generateTableData(100);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
@@ -78,6 +79,9 @@ def getPdfFromHTML(data):
 
     with open("generated_pdf_rendered.html", "w") as file:
         file.write(content)
+    
+    html = HTML(content)
+    
 
     # Header
     header_template = environment.get_template("./pdfResources/header.html")
