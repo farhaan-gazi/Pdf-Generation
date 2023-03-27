@@ -5,14 +5,24 @@ import copy;
 from weasyprint import HTML
 from weasyprint.text.fonts import FontConfiguration
 
+from fpdf import FPDF, HTMLMixin
+
 def generateTableData(N):
     notAvailable = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg"
     topSellerStyleLevelPdfRowList = [
-        {"style" : "ADFEWRQ120874210", "imageUrl" : notAvailable, 
-         "healthyRos" : 2.2, "doh" : 50, "mrp" : 1799.00, 
-         "str" : 100, "rawSalesQty" : 100, "revenue" : 202.2, 
-         "avgHealthyDaysLive" : 20, "avgRawDaysLive" : 20, 
-         "closingStock" : 10, "averageDiscountPercentage" : 20.5, "noOfStores" : 20 }
+        {"style" : "ADFEWRQ120874210", 
+         "imageUrl" : notAvailable, 
+         "healthyRos" : 2.2, 
+         "doh" : 50, 
+         "mrp" : 1799.00, 
+         "str" : 100, 
+         "rawSalesQty" : 100, 
+         "revenue" : 202.2, 
+         "avgHealthyDaysLive" : 20, 
+         "avgRawDaysLive" : 20, 
+         "closingStock" : 10, 
+         "averageDiscountPercentage" : 20.5, 
+         "noOfStores" : 20 }
     ]
     for i in range(N-1):
         sample = copy.deepcopy(topSellerStyleLevelPdfRowList[0])
@@ -30,7 +40,6 @@ def generateParams():
         "end_date" : "11-20-23",
         "category" : "category1",
         "subcategory" : "subcategory1",
-
         "channel" : "channel1",
         "attribute1" : "attribute1",
         "attribute2" : "attribute2",
@@ -47,15 +56,14 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(10);
+    results = generateTableData(19);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
             "results" : results,
             "increffLogo" : increffLogoUrl
     }
-    getPdfFromHTMLusingWeasyPrint(data)
-
+    getPdfFromHTMLusingPdfKit(data)
 
 def getPdfFromHTMLusingWeasyPrint(data):
     environment = Environment(loader=FileSystemLoader("./"))
@@ -73,7 +81,24 @@ def getPdfFromHTMLusingWeasyPrint(data):
                     presentational_hints=True )
 
 
+class MyFPDF(FPDF, HTMLMixin):
+    pass
+
+def getPdfFromHTMLusingFPDF(data):
+    pdf = MyFPDF()
+    pdf.add_page()
+
+    environment = Environment(loader=FileSystemLoader("./"))
+
+    #content
+    template = environment.get_template("./pdfResources/top-seller-report.html")
+    content = template.render( data )
+
+    pdf.write_html(content);
+    pdf.output('tuto1.pdf', 'F')
+
 def getPdfFromHTMLusingPdfKit(data):
+    print("Using PDF kit")
     environment = Environment(loader=FileSystemLoader("./"))
 
     #content
