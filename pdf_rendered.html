@@ -19,9 +19,39 @@
 
 <style>
     @page{
-        margin: 5mm;
+        margin-top: 20mm; 
+        margin-left: 5mm;
+        margin-right: 5mm;
+        margin-bottom: 7mm;
+
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        @top-left{
+            content: element(headerLeft);
+        }
+        @top-center{
+            content: element(headerCenter);
+        }
+        @bottom-left{
+            content: 'Page ' counter(page) ' / ' counter(pages) ' (This document is System Generated)';
+            font-size: 10pt;
+        }
     }
+    .headerLeft{
+        position: running(headerLeft);
+        font-size:12pt;
+    }
+
+    .headerCenter{
+        position: running(headerCenter)
+    }
+
 </style>
+        <div class="headerLeft"> 
+            <img src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg" alt="Increff Logo" height="13mm" width="auto" style="position: absolute; top: -20%; left:0%;">
+        </div>
+        <div class="headerCenter"> <h1> TOP SELLER REPORT </h1> </div>
 
 
 
@@ -32,8 +62,7 @@
 
 
 
-
-    <body>
+        
         <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
             <colgroup>
                 <col style="width: 25%">
@@ -42,12 +71,12 @@
             </colgroup>
             <tbody style="line-height: 12pt; font-size : 8pt">
                 <tr>
-                    <td style="padding-top: 10pt">Start Date : 
+                    <td style="padding-top: 1pt">Start Date : 
         
             11-01-23
         
 </td>
-                    <td style="padding-top: 10pt">End Date : 
+                    <td style="padding-top: 1pt">End Date : 
         
             11-20-23
         
@@ -90,7 +119,7 @@
 </td>
                     <td>Brand : 
         
-            NOT SELECTED
+            Not Selected
         
  </td>
                     <td>Gender : 
@@ -102,7 +131,7 @@
                 <tr>
                     <td>Style Tagging : 
         
-            NOT SELECTED
+            Not Selected
         
 </td>
                     <td>Sort By : 
@@ -112,7 +141,7 @@
 </td>
                     <td>Number of Records : 
         
-            8
+            26
         
 </td>
                     <td>Minimum Healthy Days Live : 
@@ -144,131 +173,131 @@
         <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             ADFEWRQ120874210
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             50.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
@@ -276,131 +305,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             0
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             50.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
@@ -408,131 +437,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             1
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             51.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
         </div>
@@ -543,131 +572,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             2
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             52.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
@@ -675,131 +704,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             3
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             53.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
@@ -807,131 +836,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             4
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             54.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
         </div>
@@ -942,131 +971,131 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             5
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             55.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
@@ -1074,137 +1103,2535 @@
 
         
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
         
             6
         
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> 
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
         
             2.2
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
         
             56.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
         
             1799.0
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
         
             100.0
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
         
             100
         
 </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
         
             202
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
         
             10
         
  </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
         
             20.5
         
  %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> 
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
         
             20
         
  </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            7
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            57.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            8
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            58.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            9
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            59.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            10
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            60.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            11
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            61.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            12
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            62.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            13
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            63.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            14
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            64.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            15
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            65.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            16
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            66.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            17
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            67.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            18
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            68.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            19
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            69.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            20
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            70.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            21
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            71.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            22
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            72.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            23
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            73.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+
+            
+
+        
+            <div style="display: table-cell; width: 33%; padding: 3px">
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                
+        
+            24
+        
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg" /> 
+
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> 
+        
+            2.2
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> 
+        
+            74.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> 
+        
+            1799.0
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> 
+        
+            100.0
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> 
+        
+            100
+        
+</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> 
+        
+            202
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> 
+        
+            10
+        
+ </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> 
+        
+            20.5
+        
+ %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> 
+        
+            20
+        
+ </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             
 
             
                 
-            <div style="display: table-cell; width: 33.33%"> &nbsp; </div>
+            <div style="display: table-cell; width: 33%; color:white"> 
+                <table style="table-layout: fixed; page-break-inside: avoid" border="0"> 
+                    <tbody> <tr> <td>  </td> </tr> </tbody> 
+                </table>
+            </div>
                 
             
 

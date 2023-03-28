@@ -7,6 +7,12 @@ from weasyprint.text.fonts import FontConfiguration
 
 from fpdf import FPDF, HTMLMixin
 
+"""
+    TODO: 
+        1. DONE : Bad Fix : FIX TABLE for N=7,8,10,11
+        2. DONE : Better Fix for [1]
+        2. DONE : Header, Footer
+"""
 def generateTableData(N):
     notAvailable = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/image-not-available.jpg"
     topSellerStyleLevelPdfRowList = [
@@ -56,14 +62,14 @@ def generateParams():
 
 def main():
     params = generateParams();
-    results = generateTableData(19);
+    results = generateTableData(26);
     increffLogoUrl = "/home/farhaangazi/Projects/Increff/PdfGeneration/main/pdfResources/increff_image.jpg";
     data = {
             "params" : params,
             "results" : results,
             "increffLogo" : increffLogoUrl
     }
-    getPdfFromHTMLusingPdfKit(data)
+    getPdfFromHTMLusingWeasyPrint(data)
 
 def getPdfFromHTMLusingWeasyPrint(data):
     environment = Environment(loader=FileSystemLoader("./"))

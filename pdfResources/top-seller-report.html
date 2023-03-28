@@ -19,9 +19,39 @@
 
 <style>
     @page{
-        margin: 5mm;
+        margin-top: 20mm; 
+        margin-left: 5mm;
+        margin-right: 5mm;
+        margin-bottom: 7mm;
+
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+
+        @top-left{
+            content: element(headerLeft);
+        }
+        @top-center{
+            content: element(headerCenter);
+        }
+        @bottom-left{
+            content: 'Page ' counter(page) ' / ' counter(pages) ' (This document is System Generated)';
+            font-size: 10pt;
+        }
     }
+    .headerLeft{
+        position: running(headerLeft);
+        font-size:12pt;
+    }
+
+    .headerCenter{
+        position: running(headerCenter)
+    }
+
 </style>
+        <div class="headerLeft"> 
+            <img src="{{ increffLogo }}" alt="Increff Logo" height="13mm" width="auto" style="position: absolute; top: -20%; left:0%;">
+        </div>
+        <div class="headerCenter"> <h1> TOP SELLER REPORT </h1> </div>
 
 {# Macros #}
 {% macro writeString(str) %}
@@ -37,7 +67,7 @@
         {% if str %}
             {{ str }}
         {% else %}
-            NOT SELECTED
+            Not Selected
         {% endif %}
 {% endmacro %}
 
@@ -56,8 +86,7 @@
             0
         {% endif %}
 {% endmacro %}
-
-    <body>
+        
         <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
             <colgroup>
                 <col style="width: 25%">
@@ -66,8 +95,8 @@
             </colgroup>
             <tbody style="line-height: 12pt; font-size : 8pt">
                 <tr>
-                    <td style="padding-top: 10pt">Start Date : {{ writeParam(params.start_date) }}</td>
-                    <td style="padding-top: 10pt">End Date : {{ writeParam(params.end_date) }}</td>
+                    <td style="padding-top: 1pt">Start Date : {{ writeParam(params.start_date) }}</td>
+                    <td style="padding-top: 1pt">End Date : {{ writeParam(params.end_date) }}</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -100,90 +129,90 @@
 
         {% if (results|length==0) %}
             <hr>
-            <h2 style="text-align: center;"> No Topseller Styles </h2>
+            <h2 style="text-align: center;"> No Top Seller Styles </h2>
         {% endif %}
         <br>
 
         <div style="display: table; table-layout: fixed; width: 100%; page-break-inside: avoid;">
         {% for item in results %}
             <div style="display: table-cell; width: 33%; padding: 3px">
-                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
-                            <colgroup>
-                                <col style="width: 50%">
-                                <col style="width: 50%">
-                            </colgroup>
-                            <tbody style="border: solid 1px black;">
-                                <tr>
-                                    <td colspan="2" style="text-align: center; color: blue; font-weight: bold; padding-top: 10pt">
-                                        {{ writeString(item.style) }}
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img style="padding-left: 5pt; 
-                                                    padding-right: 5pt;" 
-                                                    height="auto" 
-                                                    width="25mm" 
-                                                    src="{{ item.imageUrl }}" /> 
+                <table style="border-collapse: collapse; width: 100%; table-layout: fixed; page-break-inside: avoid" border="0">
+                    <colgroup>
+                        <col style="width: 50%">
+                        <col style="width: 50%">
+                    </colgroup>
+                    <tbody style="border: solid 1px black;">
+                        <tr>
+                            <td colspan="2" style="font-size: 12px; text-align: center; color: blue; font-weight: bold; padding-top: 2pt">
+                                {{ writeString(item.style) }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img style="padding-left: 5pt; 
+                                            padding-right: 5pt;" 
+                                            height="auto" 
+                                            width="25mm" 
+                                            src="{{ item.imageUrl }}" /> 
 
-                                    </td>
-                                    <td style="padding-bottom: 9pt">
-                                        <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
-                                            <colgroup>
-                                                <col style="width: 65%">
-                                                <col style="width: 35%">
-                                            </colgroup>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
-                                                    <td> {{ writeDecimal(item.healthyRos) }} </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">DOH</td>
-                                                    <td> {{ writeDecimal(item.doh) }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">MRP</td>
-                                                    <td> {{ writeDecimal(item.mrp) }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">STR</td>
-                                                    <td> {{ writeDecimal(item.str) }} %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Qty. Sold</td>
-                                                    <td> {{ writeInteger(item.rawSalesQty) }}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Revenue</td>
-                                                    <td> {{ writeInteger(item.revenue) }} </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Healthy Days Live</td>
-                                                    <td> {{ writeInteger(item.avgHealthyDaysLive) }} </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Days Live</td>
-                                                    <td> {{ writeInteger(item.avgRawDaysLive) }} </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Closing Stock</td>
-                                                    <td> {{ writeInteger(item.closingStock) }} </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">Avg. Discount</td>
-                                                    <td> {{ writeDecimal(item.averageDiscountPercentage) }} %</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="font-weight: bold">No of Stores</td>
-                                                    <td> {{ writeInteger(item.noOfStores) }} </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            </td>
+                            <td style="padding-bottom: 9pt">
+                                <table style="border-collapse: collapse; width: 100%; table-layout: fixed;" border="0">
+                                    <colgroup>
+                                        <col style="width: 65%">
+                                        <col style="width: 35%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: bold">ROS/ STORE/ WEEK</td>
+                                            <td> {{ writeDecimal(item.healthyRos) }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">DOH</td>
+                                            <td> {{ writeDecimal(item.doh) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">MRP</td>
+                                            <td> {{ writeDecimal(item.mrp) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">STR</td>
+                                            <td> {{ writeDecimal(item.str) }} %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Qty. Sold</td>
+                                            <td> {{ writeInteger(item.rawSalesQty) }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Revenue</td>
+                                            <td> {{ writeInteger(item.revenue) }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Healthy Days Live</td>
+                                            <td> {{ writeInteger(item.avgHealthyDaysLive) }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Days Live</td>
+                                            <td> {{ writeInteger(item.avgRawDaysLive) }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Closing Stock</td>
+                                            <td> {{ writeInteger(item.closingStock) }} </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">Avg. Discount</td>
+                                            <td> {{ writeDecimal(item.averageDiscountPercentage) }} %</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold">No of Stores</td>
+                                            <td> {{ writeInteger(item.noOfStores) }} </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             {% if(loop.index%3==0 and not loop.last) %}
         </div>
@@ -192,7 +221,11 @@
 
             {% if (loop.last and loop.length%3!=0) %}
                 {%for i in range(3-(loop.length%3))%}
-            <div style="display: table-cell; width: 33.33%"> &nbsp; </div>
+            <div style="display: table-cell; width: 33%; color:white"> 
+                <table style="table-layout: fixed; page-break-inside: avoid" border="0"> 
+                    <tbody> <tr> <td>  </td> </tr> </tbody> 
+                </table>
+            </div>
                 {% endfor %}
             {% endif %}
 
